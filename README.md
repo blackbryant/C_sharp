@@ -117,7 +117,7 @@
   - 類別與介面的選擇
   - 介面與委派的選擇
   - `Enumerable.Where` 的設計之美
-  - <a href="[https://example.com](https://programdoubledragon.blogspot.com/2024/12/c-di.html)" target="_blank">DI 與 IoC</a>
+  - <a href="https://programdoubledragon.blogspot.com/2024/12/c-di.html" target="_blank"> DI 與 IoC </a>
   - 聚合設計
 - 基礎重構
   - 何時需要重構？
