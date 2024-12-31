@@ -118,6 +118,8 @@
   - 介面與委派的選擇
   - `Enumerable.Where` 的設計之美
   - <a href="https://programdoubledragon.blogspot.com/2024/12/c-di.html" target="_blank"> DI 與 IoC </a>
+    - <a href="https://github.com/blackbryant/C_sharp/blob/main/%E7%89%A9%E4%BB%B6%E5%B0%8E%E5%90%91%E8%A8%AD%E8%A8%88%E6%87%89%E7%94%A8/DiExample.linq" target="_blank">DiExample.linq</a>
+    - <a href="https://github.com/blackbryant/C_sharp/blob/main/%E7%89%A9%E4%BB%B6%E5%B0%8E%E5%90%91%E8%A8%AD%E8%A8%88%E6%87%89%E7%94%A8/ServiceLocatorExample.linq" target="_blank">ServiceLocatorExample.linq</a>
   - 聚合設計
 - 基礎重構
   - 何時需要重構？
