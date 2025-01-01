@@ -14,7 +14,7 @@
     - 變數內容
   - 指派運算子的運作
 - 泛型的設計
-  - 泛型的定義
+  - <a href="https://github.com/blackbryant/C_sharp/blob/main/%E6%B3%9B%E5%9E%8B%E7%9A%84%E8%A8%AD%E8%A8%88/GenericExample.linq" target="_blank">泛型的定義  </a>
   - 泛型條件約束
   - 泛型中的靜態設計
 - 成員的設計
