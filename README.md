@@ -86,7 +86,7 @@
   - 列舉的定義
   - 使用列舉的意圖
   - 旗標式列舉
-- 不可變設計
+- <a href="https://github.com/blackbryant/C_sharp/blob/main/%E7%89%A9%E4%BB%B6%E5%B0%8E%E5%90%91%E8%A8%AD%E8%A8%88%E6%87%89%E7%94%A8/%E4%B8%8D%E5%8F%AF%E8%AE%8A%E8%A8%AD%E8%A8%88/ImmutableExample.linq" target="_blank">不可變設計</a>
   - 不可變設計的定義
   - 不可變設計方針
 - Lambda 與迭代器
