@@ -90,7 +90,7 @@
   - 不可變設計的定義
   - 不可變設計方針
 - Lambda 與迭代器
-  - Lambda 的演進
+  - <a href="https://github.com/blackbryant/C_sharp/blob/main/Lambda%20%E8%88%87%E8%BF%AD%E4%BB%A3%E5%99%A8/LambdaExample.linq" target="_blank">Lambda 的演進</a>
   - 迭代器原理與實作
 - 反射
   - 何謂反射
