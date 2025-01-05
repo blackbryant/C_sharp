@@ -82,10 +82,10 @@
   - Framework 中既有的委派型別
   - 非泛型委派的變異性議題
   - 泛型委派的變異性設計
-- 列舉的設計
+- <a href="https://github.com/blackbryant/C_sharp/blob/main/%E5%88%97%E8%88%89%E7%9A%84%E8%A8%AD%E8%A8%88/EnumExample.linq" target="_blank">列舉使用</a>
   - 列舉的定義
-  - 使用列舉的意圖
   - 旗標式列舉
+  - 列舉搭配字串
 - <a href="https://github.com/blackbryant/C_sharp/blob/main/%E7%89%A9%E4%BB%B6%E5%B0%8E%E5%90%91%E8%A8%AD%E8%A8%88%E6%87%89%E7%94%A8/%E4%B8%8D%E5%8F%AF%E8%AE%8A%E8%A8%AD%E8%A8%88/ImmutableExample.linq" target="_blank">不可變設計</a>
   - 不可變設計的定義
   - 不可變設計方針
