@@ -54,7 +54,7 @@
 - 結構的設計
   - 結構的定義與特徵
   - 結構設計方針
-  - Framework 中重要的結構型別
+  - <a href="https://github.com/blackbryant/C_sharp/blob/main/%E7%B5%90%E6%A7%8B%E7%9A%84%E8%A8%AD%E8%A8%88/StructExample.linq" target="_blank"> Framework 中重要的結構型別 </a>
     - `Nullable<T>`
     - `ValueTuple` 家族
     - `ValueTask` 與 `ValueTask<T>`
