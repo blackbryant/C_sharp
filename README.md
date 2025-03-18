@@ -127,3 +127,4 @@
   - 基本重構技巧
 - 實務應用
   - UUIDs & Uild
+  - <a href="https://github.com/blackbryant/C_sharp/blob/main/%E7%89%A9%E4%BB%B6%E5%B0%8E%E5%90%91%E8%A8%AD%E8%A8%88%E6%87%89%E7%94%A8/ServiceLocatorExample.linq" target="_blank">IEnumerable & Queryable差異</a> 
