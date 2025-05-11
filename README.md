@@ -134,6 +134,7 @@
     - 系統效能與硬體的關係
     - 非同步觀念
     - 平行處理與並行處理
+    - <a href="https://learn.microsoft.com/zh-tw/sysinternals/downloads/process-explorer" target="_blank" >查看執行緒Process Explorer</a>
   - net core
     - 開發第一個非同步程式
     - 
