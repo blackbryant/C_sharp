@@ -137,4 +137,6 @@
     - <a href="https://learn.microsoft.com/zh-tw/sysinternals/downloads/process-explorer" target="_blank" >查看執行緒Process Explorer</a>
   - net core
     - 開發第一個非同步程式
+    - 使用lock建立同步化
+    - 執行緒安全性
     - 
