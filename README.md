@@ -113,7 +113,7 @@
   - 開閉
   - 最小知識
 - 物件導向設計應用
-  - 三原則定義
+  - <a href="https://github.com/blackbryant/C_sharp/blob/main/%E7%89%A9%E4%BB%B6%E5%B0%8E%E5%90%91%E8%A8%AD%E8%A8%88%E6%87%89%E7%94%A8/%E8%A8%AD%E8%A8%88%E4%B8%89%E5%8E%9F%E5%89%87.md" target="_blank"> 三原則定義 </a>
   - 三原則的運用實例
   - 類別與介面的選擇
   - 介面與委派的選擇
