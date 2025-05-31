@@ -127,8 +127,8 @@
   - 基本重構技巧
 - 實務應用
   - UUIDs & Uild
-  - <a href="https://github.com/blackbryant/C_sharp/blob/main/%E5%AF%A6%E5%8B%99%E6%87%89%E7%94%A8/Queryable%E7%AF%84%E4%BE%8B.linq" target="_blank">IEnumerable & Queryable差異</a>
-
+  - <a href="https://github.com/blackbryant/C_sharp/blob/main/%E5%AF%A6%E5%8B%99%E6%87%89%E7%94%A8/IQuery%26IEnumerable%E5%B7%AE%E7%95%B0.md" target="_blank">IEnumerable & Queryable說明</a>
+  - <a href="https://github.com/blackbryant/C_sharp/blob/main/%E5%AF%A6%E5%8B%99%E6%87%89%E7%94%A8/IQuery%26IEnumerable%E7%AF%84%E4%BE%8B.linq" target="_blank">IEnumerable & Queryable範例</a>
 - 非同步程式設計
   - 觀念
     - 系統效能與硬體的關係
