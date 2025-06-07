@@ -140,3 +140,5 @@
     - 使用lock建立同步化
     - 執行緒安全性
     - 
+- Web Api
+  -  <a href="https://github.com/blackbryant/C_sharp/blob/main/WebApi/IValidatableObject%E3%80%81FluentValidation%E3%80%81Data%20Annotation%20%E5%B7%AE%E7%95%B0%E6%AF%94%E8%BC%83" target="_blank">IValidatableObject、FluentValidation、Data Annotation 差異比較</a>
