@@ -1,0 +1,131 @@
+
+##  IValidatableObject、FluentValidation、Data Annotation 差異比較
+
+| 驗證方式        | IValidatableObject       | Data Annotation（資料註解）         | FluentValidation           |
+| ----------- | ------------------------ | ----------------------------- | -------------------------- |
+| **定義方式**    | 介面 (Interface)           | 屬性(Attribute)標籤裝飾             | 類別(Class)撰寫規則              |
+| **撰寫位置**    | Model 本身實作 `Validate` 方法 | 在 Model 屬性上加 `[Required]` 等標籤 | 另外寫 Validator 類別           |
+| **可讀性與維護性** | 一般，可集中管理                 | 簡單，容易上手但規模大時難維護               | 高，可拆分邏輯，維護性最佳              |
+| **複雜邏輯支援**  | 支援，但邏輯必須寫在 Model 裡       | 複雜邏輯難表達                       | 非常靈活，支援條件、分組、規則組合          |
+| **相依性**     | 無需外部套件（.NET 標準）          | 無需外部套件（.NET 標準）               | 需要引用 `FluentValidation` 套件 |
+| **錯誤訊息管理**  | 自己手動處理                   | 可透過標籤設定錯誤訊息                   | 可統一管理、客製錯誤訊息               |
+| **適合情境**    | 少量或簡單的自訂驗證邏輯             | 表單驗證簡單欄位（像 \[EmailAddress]）   | 複雜、需多規則驗證且需易於擴充維護          |
+| **優點**      | 靈活、內建功能                  | 簡單易用、上手快速                     | 最靈活、功能最強大                  |
+| **缺點**      | 容易讓 Model 變肥胖            | 規則寫死在 Model 裡，難擴充             | 初期要學習一點語法                  |
+
+###  使用情境
+| 專案大小      | 建議方式               |
+| --------- | ------------------ |
+| 小型、快速表單   | Data Annotation    |
+| 中型、有些複雜邏輯 | IValidatableObject |
+| 中大型、需維護擴充 | FluentValidation   |
+
+###  注意：現在大多數專業團隊中大型專案都偏好用 FluentValidation，因為：
++ 驗證邏輯可以寫得很乾淨
++ 可以單元測試驗證規則
++ 支援條件驗證、分組驗證
++ 很容易維護新加規則！
+
+
+## 範例
+
+### Data Annotation（資料註解）
+#### 情境：我們有一個 會員註冊 DTO，規則如下：
+```C#
+using System.ComponentModel.DataAnnotations;
+using System.Collections.Generic;
+
+public class UserRegistrationDto : IValidatableObject
+{
+    public string Name { get; set; }
+    public int Age { get; set; }
+    public string Email { get; set; }
+
+    public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
+    {
+        if (string.IsNullOrWhiteSpace(Name))
+        {
+            yield return new ValidationResult("姓名必填", new[] { nameof(Name) });
+        }
+
+        if (Age < 18)
+        {
+            yield return new ValidationResult("年齡必須滿 18 歲", new[] { nameof(Age) });
+        }
+
+        if (string.IsNullOrWhiteSpace(Email) || !Email.Contains("@"))
+        {
+            yield return new ValidationResult("Email 格式錯誤", new[] { nameof(Email) });
+        }
+    }
+}
+```
+
+### IValidatableObject（介面驗證）
+#### 把驗證邏輯寫在 Model 裡的 Validate 方法
+```C#
+using System.ComponentModel.DataAnnotations;
+using System.Collections.Generic;
+
+public class UserRegistrationDto : IValidatableObject
+{
+    public string Name { get; set; }
+    public int Age { get; set; }
+    public string Email { get; set; }
+
+    public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
+    {
+        if (string.IsNullOrWhiteSpace(Name))
+        {
+            yield return new ValidationResult("姓名必填", new[] { nameof(Name) });
+        }
+
+        if (Age < 18)
+        {
+            yield return new ValidationResult("年齡必須滿 18 歲", new[] { nameof(Age) });
+        }
+
+        if (string.IsNullOrWhiteSpace(Email) || !Email.Contains("@"))
+        {
+            yield return new ValidationResult("Email 格式錯誤", new[] { nameof(Email) });
+        }
+    }
+}
+```
+
+### FluentValidation（第三方驗證框架）
+#### 把驗證邏輯拆成獨立類別，超適合大型系統，且有連鎖語法支援：
+```
+public class UserRegistrationDto
+{
+    public string Name { get; set; }
+    public int Age { get; set; }
+    public string Email { get; set; }
+}
+```
+```C#
+using FluentValidation;
+
+public class UserRegistrationDtoValidator : AbstractValidator<UserRegistrationDto>
+{
+    public UserRegistrationDtoValidator()
+    {
+        RuleFor(x => x.Name)
+            .NotEmpty().WithMessage("姓名必填");
+
+        RuleFor(x => x.Age)
+            .GreaterThanOrEqualTo(18).WithMessage("年齡必須滿 18 歲");
+
+        RuleFor(x => x.Email)
+            .NotEmpty().WithMessage("Email 必填")
+            .EmailAddress().WithMessage("Email 格式錯誤");
+    }
+}
+
+```
+啟用 FluentValidation（ASP.NET Core 專案）：
+
+```C#
+builder.Services.AddFluentValidationAutoValidation();
+builder.Services.AddValidatorsFromAssemblyContaining<UserRegistrationDtoValidator>();
+```
