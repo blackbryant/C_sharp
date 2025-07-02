@@ -145,3 +145,4 @@
 - Web Socket(SignalR)
   - 直接呼叫
   - Web Api呼叫
+  - 加上權限限制(jwt)
