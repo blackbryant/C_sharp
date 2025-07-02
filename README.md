@@ -143,6 +143,9 @@
 - Web Api
   -  <a href="https://github.com/blackbryant/C_sharp/blob/main/WebApi/IValidatableObject%E3%80%81FluentValidation%E3%80%81Data%20Annotation%20%E5%B7%AE%E7%95%B0%E6%AF%94%E8%BC%83.md" target="_blank">IValidatableObject、FluentValidation、Data Annotation 差異比較</a>
 - Web Socket(SignalR)
-  - 直接呼叫
-  - Web Api呼叫
+  - 直接呼叫 <a href="https://github.com/blackbryant/C_sharp/blob/main/Web%20Socket(SignalR)/SignaREx02.linq" target="_blank">Linq</a> <a href="https://github.com/blackbryant/C_sharp/blob/main/Web%20Socket(SignalR)/SingaREx02.html" target="_blank">html</a>
+  - Web Api呼叫 <a href="https://github.com/blackbryant/C_sharp/blob/main/Web%20Socket(SignalR)/SignaREx01.linq" target="_blank">Linq</a> <a href="https://github.com/blackbryant/C_sharp/blob/main/Web%20Socket(SignalR)/SingaREx01.html" target="_blank">html</a>
+  - SingalR發票辨識範例 <a href="https://github.com/blackbryant/C_sharp/blob/main/Web%20Socket(SignalR)/SingalR%E7%99%BC%E7%A5%A8%E8%BE%A8%E8%AD%98%E7%AF%84%E4%BE%8B.linq" target="_blank">Linq</a> <a href="https://github.com/blackbryant/C_sharp/blob/main/Web%20Socket(SignalR)/SingalR%E7%99%BC%E7%A5%A8%E8%BE%A8%E8%AD%98%E7%AF%84%E4%BE%8B.html" target="_blank">html</a>
+
   - 加上權限限制(jwt)
+  - <a href="https://github.com/blackbryant/C_sharp/blob/main/Web%20Socket(SignalR)/Web%20API%E5%92%8CHub%E6%AF%94%E8%BC%83.md" target="_blank">Web API和Hub比較</a>
