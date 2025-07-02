@@ -142,3 +142,6 @@
     - 
 - Web Api
   -  <a href="https://github.com/blackbryant/C_sharp/blob/main/WebApi/IValidatableObject%E3%80%81FluentValidation%E3%80%81Data%20Annotation%20%E5%B7%AE%E7%95%B0%E6%AF%94%E8%BC%83.md" target="_blank">IValidatableObject、FluentValidation、Data Annotation 差異比較</a>
+- Web Socket(SignalR)
+  - 直接呼叫
+  - Web Api呼叫
