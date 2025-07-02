@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>SignalR Frontend</title>
+</head>
+<body>
+    <h2>SignalR Chat</h2>
+    <input type="text" id="messageInput" placeholder="Message" />
+    <button onclick="sendMessageByApi()">Send</button>
+
+    <ul id="messagesList"></ul>
+
+    <!-- SignalR JS CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/7.0.5/signalr.min.js"></script>
+    <script>
+      function sendMessageByApi() {
+    const message = document.getElementById("messageInput").value;
+
+    fetch("http://localhost:5000/putOrder", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(message)
+        })
+        .then(res => res.text())
+        .then(console.log)
+        .catch(console.error);
+    }
+
+    </script>
+</body>
+</html>
+
